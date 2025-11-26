@@ -728,4 +728,3 @@ Built with ❤️ using Flutter
 
 **Happy Coding! 🚀**
 #   S m a r t F r u i t - A I  
- 
