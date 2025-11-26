@@ -6,9 +6,13 @@ A production-ready Flutter application that uses on-device TensorFlow Lite for f
 [![Firebase](https://img.shields.io/badge/Firebase-Enabled-orange.svg)](https://firebase.google.com/)
 [![TensorFlow Lite](https://img.shields.io/badge/TFLite-Enabled-yellow.svg)](https://www.tensorflow.org/lite)
 
+<br>
+
 ---
 
 ## 📱 Features
+
+<br>
 
 ### ✅ Implemented Features
 
@@ -18,12 +22,16 @@ A production-ready Flutter application that uses on-device TensorFlow Lite for f
   - Persistent user sessions
   - Automatic redirect based on auth state
 
+<br>
+
 - **Fruit Recognition (TensorFlow Lite)**
   - On-device ML model inference
   - Camera capture and gallery image selection
   - Real-time fruit classification
   - Confidence percentage display
   - Fruit illustration preview
+
+<br>
 
 - **AI Voice Assistant**
   - Speech-to-text input
@@ -32,6 +40,8 @@ A production-ready Flutter application that uses on-device TensorFlow Lite for f
   - Chat history tracking
   - Natural language processing for fruit/nutrition queries
 
+<br>
+
 - **Navigation & UI**
   - Bottom navigation bar
   - Home dashboard
@@ -39,10 +49,14 @@ A production-ready Flutter application that uses on-device TensorFlow Lite for f
   - Recognition history
   - About screen
 
+<br>
+
 - **State Management**
   - Riverpod for scalable state management
   - AsyncValue for loading/error states
   - Provider-based architecture
+
+<br>
 
 ---
 
@@ -140,6 +154,8 @@ SmartFruit/
 └── README.md                               # This file
 ```
 
+<br>
+
 ---
 
 ## 🚀 Setup Instructions
@@ -152,12 +168,16 @@ SmartFruit/
 - Firebase project
 - OpenAI API key or Google Gemini API key
 
+<br>
+
 ### Step 1: Clone and Install Dependencies
 
 ```powershell
 cd d:\SmartFruit
 flutter pub get
 ```
+
+<br>
 
 ### Step 2: Configure Firebase
 
@@ -182,6 +202,8 @@ flutter pub get
 3. Place it in `ios/Runner/GoogleService-Info.plist`
 4. Update the file with your actual Firebase credentials
 
+<br>
+
 ### Step 3: Configure API Keys
 
 Edit `lib/core/config/app_config.dart`:
@@ -200,6 +222,8 @@ class AppConfig {
 **Get API Keys:**
 - OpenAI: [https://platform.openai.com/api-keys](https://platform.openai.com/api-keys)
 - Google Gemini: [https://makersuite.google.com/app/apikey](https://makersuite.google.com/app/apikey)
+
+<br>
 
 ### Step 4: Add TensorFlow Lite Model
 
@@ -248,6 +272,8 @@ Kiwi
 Peach
 ```
 
+<br>
+
 ### Step 5: Add Fruit Illustrations
 
 Place fruit images in `assets/fruits/`:
@@ -260,6 +286,8 @@ assets/fruits/
 ├── grape.png
 └── ...
 ```
+
+<br>
 
 ### Step 6: Run the App
 
@@ -277,6 +305,8 @@ flutter run -d <device_id>
 flutter build apk
 flutter build ios
 ```
+
+<br>
 
 ---
 
@@ -301,6 +331,8 @@ service cloud.firestore {
 }
 ```
 
+<br>
+
 ### Android Permissions
 
 Already configured in `android/app/src/main/AndroidManifest.xml`:
@@ -312,6 +344,8 @@ Already configured in `android/app/src/main/AndroidManifest.xml`:
 <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 ```
 
+<br>
+
 ### iOS Permissions
 
 Already configured in `ios/Runner/Info.plist`:
@@ -322,6 +356,8 @@ Already configured in `ios/Runner/Info.plist`:
 <key>NSMicrophoneUsageDescription</key>
 <string>This app needs microphone access for voice assistant</string>
 ```
+
+<br>
 
 ---
 
@@ -351,11 +387,15 @@ Run tests:
 flutter test
 ```
 
+<br>
+
 ### Integration Tests
 
 ```powershell
 flutter test integration_test/
 ```
+
+<br>
 
 ### Model Validation
 
@@ -366,6 +406,8 @@ Test your TFLite model:
 final result = await recognitionService.recognizeFruit(testImage);
 expect(result.confidence, greaterThan(0.7));
 ```
+
+<br>
 
 ---
 
@@ -400,6 +442,8 @@ authState.when(
 );
 ```
 
+<br>
+
 ---
 
 ## 🔒 Security Best Practices
@@ -410,6 +454,8 @@ authState.when(
 - Firestore security rules
 - API keys in separate config file
 - Input validation on all forms
+
+<br>
 
 ### ⚠️ Important for Production
 
@@ -427,6 +473,8 @@ authState.when(
 4. **Use Cloud Functions** for sensitive API calls
 5. **Enable App Check** for Firebase services
 
+<br>
+
 ---
 
 ## 🚀 Performance Optimization
@@ -436,6 +484,8 @@ authState.when(
 - Use quantized models (reduces size by 75%)
 - Optimize input image size (224x224 recommended)
 - Implement caching for repeated inferences
+
+<br>
 
 ### Image Handling
 
@@ -448,13 +498,15 @@ authState.when(
     maxHeight: 1024,
     imageQuality: 85,
   );
-  ```
+```
 
-### API Calls
+<br>
 
-- Implement request debouncing
+### API Calls- Implement request debouncing
 - Cache responses where applicable
 - Handle network errors gracefully
+
+<br>
 
 ---
 
@@ -466,11 +518,15 @@ authState.when(
 - Target SDK: 34 (Android 14)
 - Supports multi-dex
 
+<br>
+
 ### iOS
 
 - Minimum iOS: 12.0
 - Requires Xcode 14+
 - CocoaPods for dependencies
+
+<br>
 
 ---
 
@@ -496,6 +552,8 @@ Solution:
 Solution: Check AndroidManifest.xml and Info.plist have required permissions
 ```
 
+<br>
+
 ### Runtime Issues
 
 **Problem:** Speech recognition not working
@@ -513,6 +571,8 @@ Solution:
 2. Check internet connection
 3. Review API quota/billing status
 ```
+
+<br>
 
 ---
 
@@ -551,6 +611,8 @@ dependencies:
   cached_network_image: ^3.3.1
 ```
 
+<br>
+
 ---
 
 ## 🎨 UI/UX Wireframes
@@ -570,6 +632,8 @@ dependencies:
 │   [Sign Up]             │
 └─────────────────────────┘
 ```
+
+<br>
 
 ### Home Screen
 ```
@@ -591,6 +655,8 @@ dependencies:
 └─────────────────────────┘
 ```
 
+<br>
+
 ### Recognition Screen
 ```
 ┌─────────────────────────┐
@@ -610,6 +676,8 @@ dependencies:
 └─────────────────────────┘
 ```
 
+<br>
+
 ### Assistant Screen
 ```
 ┌─────────────────────────┐
@@ -626,6 +694,8 @@ dependencies:
 └─────────────────────────┘
 ```
 
+<br>
+
 ---
 
 ## 🧑‍💻 Development Guidelines
@@ -636,6 +706,8 @@ dependencies:
 - Use meaningful variable names
 - Comment complex logic
 - Keep functions small and focused
+
+<br>
 
 ### Git Workflow
 
@@ -651,6 +723,8 @@ git commit -m "feat: add new feature"
 git push origin feature/new-feature
 ```
 
+<br>
+
 ### Commit Message Format
 
 ```
@@ -662,6 +736,8 @@ refactor: Refactor code
 test: Add tests
 chore: Update dependencies
 ```
+
+<br>
 
 ---
 
@@ -676,13 +752,17 @@ chore: Update dependencies
 - [ ] Multi-language support
 - [ ] Dark mode improvements
 - [ ] Accessibility features
-- [ ] Widget for quick recognition
+- Widget for quick recognition
+
+<br>
 
 ---
 
 ## 📄 License
 
 This project is licensed under the MIT License.
+
+<br>
 
 ---
 
@@ -696,6 +776,8 @@ Contributions are welcome! Please follow these steps:
 4. Add tests
 5. Submit a pull request
 
+<br>
+
 ---
 
 ## 📞 Support
@@ -706,6 +788,8 @@ For issues and questions:
 - Check existing documentation
 - Review Firebase console for backend issues
 
+<br>
+
 ---
 
 ## 👨‍💻 Author
@@ -713,6 +797,8 @@ For issues and questions:
 **SmartFruit Development Team**
 
 Built with ❤️ using Flutter
+
+<br>
 
 ---
 
@@ -724,7 +810,12 @@ Built with ❤️ using Flutter
 - Flutter team for the amazing framework
 - All open-source contributors
 
+<br>
+
 ---
 
+<br>
+
 **Happy Coding! 🚀**
-#   S m a r t F r u i t - A I  
+#   S m a r t F r u i t - A I 
+ 
